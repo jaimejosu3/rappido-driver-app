@@ -1,0 +1,30 @@
+.order-item{
+	display: flex;
+	margin-top: 10px;
+	flex-direction: column;
+	width: calc(100% -10px);
+	border: 1px solid green;
+	padding: 10px;
+	border-radius: 5px;
+	.top{
+		display: flex;
+		width: calc(100% -10px);
+		justify-content: space-between;
+		align-items: center;
+		
+		
+		.address,.total{
+			display: flex;
+			flex-direction: column;
+			span{
+				color: gray;
+				font-size: 13px;
+			}
+		}
+	}
+	.bottom{
+		margin-top: 10px;
+		display: flex;
+		justify-content: flex-end;
+	}
+}

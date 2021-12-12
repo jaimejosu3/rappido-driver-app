@@ -1,0 +1,20 @@
+<div class="signin-page">
+	<div class="logo">
+		<img src="./assets/img/logo.png" alt="">
+	</div>
+	<div class="form__group field">
+    <label for="email" class="form__label">Correo</label>
+    <input [(ngModel)]="email" type="email" class="form__field" placeholder="Correo" name="email" id='email' required />
+  </div>
+
+	<div class="form__group field">
+    <label for="password" class="form__label">Contraseña</label>
+    <input [(ngModel)]="password" type="password" class="form__field" placeholder="Contraseña" name="password" id='password' required />
+  </div>
+	<div class="login-button">
+		<button class="green" (click)="signin()">Iniciar Sesion</button>
+		<br>
+		<br>
+		<button class="green" routerLink="/signup">Registrarse</button>
+	</div>
+</div>

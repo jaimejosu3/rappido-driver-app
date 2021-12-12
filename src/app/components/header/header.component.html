@@ -1,0 +1,9 @@
+<div class="header-menu" *ngIf="pagesService.showMenu">
+	<div class="back-button" (click)="goBack()">
+		<fa-icon *ngIf="pagesService.canGoBack" [icon]="faBackButton"></fa-icon>
+	</div>
+	<div class="app-logo">
+		<img src="./assets/img/logo.png" alt="">
+	</div>
+	<div class="space"></div>
+</div>

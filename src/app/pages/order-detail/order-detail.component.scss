@@ -1,0 +1,40 @@
+.cart{
+	padding: 20px;
+	flex-wrap: wrap;
+	h2{
+		margin-bottom: 10px;
+	}
+	span{
+		margin: 10px;
+		border-radius: 5px;
+		border: 1px solid green;
+		color: green;
+		padding: 5px;
+	}
+	.list{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 10px;
+		app-product-item{
+			width: 100%;
+		}
+	}
+	.total{
+		margin-top: 20px;
+		width: 100%;
+		text-align: right;
+	}
+	.request{
+		margin-top: 10px;
+		text-align: right;
+	}
+	.address{
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+		.label{
+			font-weight: bold;
+		}
+	}
+}

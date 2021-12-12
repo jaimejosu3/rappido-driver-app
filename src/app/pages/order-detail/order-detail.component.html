@@ -1,0 +1,26 @@
+<div class="cart">
+	<h2>Detalle de orden </h2>
+	<span>{{order.status}}</span>
+	<div class="list">
+		<app-product-item *ngFor="let product of order.products" [product]="product"></app-product-item>
+	</div>
+	<div class="address">
+		<div class="label">Direccion</div>
+		<div class="value">{{order.address.address}}</div>
+	</div>
+	<div class="total">
+		<p>ISV: {{((order.total*0.75)*0.15).toFixed(2)}}</p>
+		<p>Subtotal: {{((order.total*0.75)*0.85).toFixed(2)}}</p>
+		<p>Comision de app: {{(order.total*0.10).toFixed(2)}}</p>
+		<p>Ganancia: {{(order.total*0.15).toFixed(2)}}</p>
+		<b>Total: L. {{order.total?.toFixed(2)}}</b>
+	</div>
+
+	<div class="request">
+		<button *ngIf="order.status == 'pending'" class="green" (click)="accept();">Aceptar</button>
+		<button *ngIf="order.status == 'accepted'" class="green" (click)="take();">Recoger</button>
+		<button *ngIf="order.status == 'inorigin'" class="green" (click)="give();">Entregar</button>
+		<button *ngIf="order.status == 'indestination'" class="green" (click)="complete();">Completar</button>
+
+	</div>
+</div>

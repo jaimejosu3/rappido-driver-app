@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+button.green {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 30px;
+  line-height: 30px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  z-index: 9;
+  border: 0;
+}
+
+button:hover {
+  background: #00bd68;
+}
+
+button.red{
+	background-image: linear-gradient(-180deg, #d70000, #bd0000);
+}
+
+button.red:hover {
+  background: #bd0000;
+}

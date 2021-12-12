@@ -1,0 +1,15 @@
+<div class="cart-item">
+	<div class="left">
+		<div class="product-image">
+			<img [src]="product.image" alt="">
+		</div>
+		<div class="product-name">
+			{{product.name}} x ({{product.amount}})
+		</div>
+	</div>
+	<div class="right">
+		<div class="price">
+			L. {{(product.price * product.amount).toFixed(2)}}
+		</div>
+	</div>
+</div>

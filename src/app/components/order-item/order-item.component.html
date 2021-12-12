@@ -1,0 +1,15 @@
+<div class="order-item">
+	<div class="top">
+		<div class="address">
+			<span>Direccion</span>
+			{{order.address.address}}
+		</div>
+		<div class="total">
+			<span>Total</span>
+			L. {{order.total.toFixed(2)}}
+		</div>
+	</div>
+	<div class="bottom">
+		<button class="green" (click)="orderDetail()">Ver Pedido</button>
+	</div>
+</div>

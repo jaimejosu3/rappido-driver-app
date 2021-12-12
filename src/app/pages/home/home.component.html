@@ -1,0 +1,13 @@
+<div class="orders">
+	<div class="buttons">
+		<button class="{{currentTab == 'pending' ? 'active' : ''}}" (click)="changeTab('pending')">Pendientes</button>
+		<button class="{{currentTab == 'current' ? 'active' : ''}}" (click)="changeTab('current')">En curso</button>
+		<button class="{{currentTab == 'completed' ? 'active' : ''}}" (click)="changeTab('completed')">Entregadas</button>
+	</div>
+	<div class="list">
+		<app-order-item *ngFor="let order of ordersSercice.orders" [order]="order"></app-order-item>
+		<div *ngIf="ordersSercice.orders.length == 0" class="no-orders">
+			No se encontraron pedidos
+		</div>
+	</div>
+</div>

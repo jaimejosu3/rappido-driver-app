@@ -17,6 +17,8 @@ import { OrderItemComponent } from './components/order-item/order-item.component
 import { OrderDetailComponent } from './pages/order-detail/order-detail.component';
 import { ProductItemComponent } from './components/product-item/product-item.component';
 import { FormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,13 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [{ provide: JWT_OPTIONS, useValue: JWT_OPTIONS },AuthGuardService, PagesService, AuthService, JwtHelperService],
   bootstrap: [AppComponent]
